@@ -10,7 +10,7 @@ void DisplayAllFactors(unsigned int number);
 
 unsigned int GetValidNumericalInput()
 {
-    unsigned int input;
+    int input;
 
     bool retry;
 
@@ -22,7 +22,7 @@ unsigned int GetValidNumericalInput()
 
         cin >> input;
 
-        if (cin.fail() || input == 0)
+        if (cin.fail() || input <= 0)
         {
             cout << "Input not valid." << endl;
             cin.clear();
